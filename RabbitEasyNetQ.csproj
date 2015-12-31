@@ -53,7 +53,7 @@
     <Compile Include="Messages\MessageA.cs" />
     <Compile Include="Messages\MessageB.cs" />
     <Compile Include="Patterns\PlainRabbit.cs" />
-    <Compile Include="Messages\Program.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

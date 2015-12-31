@@ -2,7 +2,7 @@
 using System.IO;
 using RabbitEasyNetQ.Patterns;
 
-namespace RabbitEasyNetQ.Messages
+namespace RabbitEasyNetQ
 {
     class Program
     {

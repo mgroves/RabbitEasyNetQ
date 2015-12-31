@@ -26,7 +26,7 @@ namespace RabbitEasyNetQ.Patterns
             var conn = connFactory.CreateConnection();
             using (var channel = conn.CreateModel())
             {
-                channel.ExchangeDeclare("MyExchange", ExchangeType.Direct); // exchange name, exchange time
+                channel.ExchangeDeclare("MyExchange", ExchangeType.Direct); // exchange name, exchange type
                 channel.QueueDeclare("MyQueue", true, false, false, null);  // queue name, queue settings
                 channel.QueueBind("MyQueue", "MyExchange", "My.Routing.Key");   // queue-exchange binding, routing key
 
