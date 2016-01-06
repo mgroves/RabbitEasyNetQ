@@ -9,10 +9,10 @@ namespace RabbitEasyNetQ.Patterns
     {
         public void Run()
         {
-            SetupSubscribe("warehouse", "A1");      // warehouse will do something
-            SetupSubscribe("warehouse", "A2");      // scale the warehouse task
-            SetupSubscribe("bank", "B");            // bank will do something
-            SetupSubscribe("shipping", "C");        // UPS/FedEx will do something
+            //SetupSubscribe("warehouse", "A1");      // warehouse will do something
+            //SetupSubscribe("warehouse", "A2");      // scale the warehouse task
+            //SetupSubscribe("bank", "B");            // bank will do something
+            //SetupSubscribe("shipping", "C");        // UPS/FedEx will do something
             StartPublishing();
         }
 

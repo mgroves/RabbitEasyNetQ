@@ -9,7 +9,7 @@ namespace RabbitEasyNetQ.Patterns
     {
         public void Run()
         {
-            SetupReceive();
+            //SetupReceive();
             StartSending();
         }
 
@@ -20,8 +20,7 @@ namespace RabbitEasyNetQ.Patterns
                 .Add<MessageA>(m =>
                 {
                     Console.WriteLine("Received MessageA: UserId: {0}, Purchase Price: {1}", m.UserId, m.PurchasePrice);
-                }));
-            bus.Receive("My.Queue", x=> x
+                })
                 .Add<MessageB>(m =>
                 {
                     Console.WriteLine("Received MessageB: ItemNumber: {0}, Ship to Address: {1}", m.ItemNumber, m.ShipToAddress);

@@ -9,7 +9,7 @@ namespace RabbitEasyNetQ.Patterns
     {
         public void Run()
         {
-            SetupResponse();
+            //SetupResponse();
             MakeRequests();
         }
 
@@ -40,9 +40,16 @@ namespace RabbitEasyNetQ.Patterns
 
                 // **** synchronous version
                 // if there is no process to receive requests, this will timeout
-                Console.Write("Request: {0} + {1} = ", request.Addend1, request.Addend2);
-                var response = bus.Request<MyRequest, MyResponse>(request);
-                Console.WriteLine(response.Sum);
+                try
+                {
+                    Console.Write("Request: {0} + {1} = ", request.Addend1, request.Addend2);
+                    var response = bus.Request<MyRequest, MyResponse>(request);
+                    Console.WriteLine(response.Sum);
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine("Error");
+                }
                 // ****
 
                 // ****asynchronous version

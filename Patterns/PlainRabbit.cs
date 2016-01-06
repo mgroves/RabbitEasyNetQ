@@ -15,7 +15,7 @@ namespace RabbitEasyNetQ.Patterns
             ThreadPool.QueueUserWorkItem(x => RunPublisher());
 
             // subscribe to a queue, process items
-            SetupSubscriber();
+            //SetupSubscriber();
         }
 
         void RunPublisher(int numMessages = 1000)
